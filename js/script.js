@@ -177,7 +177,9 @@
 				submitHandler: function(form){
 					$.ajax({
 						type: "POST",
-						url:"mail.php",
+						url:"https://yasermj.github.io/yaser/mail.php",
+						crossDomain: true,
+						
 						data: $(form).serialize(),
 						success: function() {
 							$('.form-group-message').show();
