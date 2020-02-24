@@ -170,31 +170,31 @@
 	  Ajax Forms
 	-------------------------------------------------------------------------------*/
 
-	if ($('.a-form').length) {
-		$('.a-form').each(function(){
-			$(this).validate({
-				errorClass: 'error',
-				submitHandler: function(form){
-					$.ajax({
-						type: "POST",
-						url:"https://yasermj.github.io/yaser/mail.php",
-						crossDomain: true,
+	// if ($('.a-form').length) {
+	// 	$('.a-form').each(function(){
+	// 		$(this).validate({
+	// 			errorClass: 'error',
+	// 			submitHandler: function(form){
+	// 				$.ajax({
+	// 					type: "POST",
+	// 					url:"https://yasermj.github.io/yaser/mail.php",
+	// 					crossDomain: true,
 						
-						data: $(form).serialize(),
-						success: function() {
-							$('.form-group-message').show();
-							$('#error').hide();
-							$('#success').show();
-						},
-						error: function(){
-							$('.form-group-message').show();
-							$('#success').hide();
-							$('#error').show();
-						}
-					});
-				}
-			});
-		});
-	}
+	// 					data: $(form).serialize(),
+	// 					success: function() {
+	// 						$('.form-group-message').show();
+	// 						$('#error').hide();
+	// 						$('#success').show();
+	// 					},
+	// 					error: function(){
+	// 						$('.form-group-message').show();
+	// 						$('#success').hide();
+	// 						$('#error').show();
+	// 					}
+	// 				});
+	// 			}
+	// 		});
+	// 	});
+	// }
 
 }($));
